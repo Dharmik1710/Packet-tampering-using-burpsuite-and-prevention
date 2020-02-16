@@ -1,6 +1,6 @@
 <html>
 <head>
-     <title>Auctions-signUp</title>  
+     <title>E - Commerce Demo-Login</title>  
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -47,7 +47,8 @@
         if($row["Password"]==$p){
           session_start();
           $_SESSION["userEmail"] = $e;
-          header("Location: encrypt.php");
+          // Change the file for preventing the attack
+          header("Location: afterSignIn.php");
         }else{
           echo '<div class="alert alert-warning">
                 <strong>Warning</strong> Your Password is incorrect !!
